@@ -1,43 +1,48 @@
 #!/usr/bin/env python
 
-	
-def menu():
-	print '***************************'
-	print '<1> input'
-	print '<2> output'
+def display_menu():
+    print '************************************'
+    print '|      welcom use the tools        |'
+    print '|choose:1~5 function,q or Q is Exit|'
+    print '|1.input member                    |'
+    print '|2.print list                      |'
+    print '|3.find member                     |'
+    print '|4.delete member                   |'
+    print '|5.modify member                   |'
+    print '************************************'
 
-back_data = []
+
 
 def input_func():
-	name = raw_input("input you name:")
-	num = int(raw_input("input you number:"))
-	sex = raw_input("input you sex:")
-	scor = int(raw_input("input you s:"))
-	ret = [name, num, sex, scor]
-	back_data.append(ret)
-	print 'input done'
-	return ret
+    name = raw_input("input name:")
+    number = raw_input("input number:")
+    classmates = [name, number]
 
-def output_func():
-	pri = back_data[0]
-	print pri[0]
-	print pri[1]
-	print pri[2]
+    print 'your input is:'
+    print classmates[0]
+    print classmates[1]
 
+    return  classmates
 
 if __name__=='__main__':
-	menu()
-	while 1 :
-		choose = raw_input("choose:")
-		if choose == 'q' or choose == 'Q':
-			print 'you choose exit'
-			exit()
-		elif choose == '1':
-			print 'you choose 1'
-			input_func()
-		elif choose == '2':
-			print 'you choose 2'
-			output_func()
-		else :
-			print 'error'
-                    
+    display_menu()
+    while 1 :
+        choose = raw_input("please input your choose:")
+        if choose == 'Q' or choose == 'q':
+            print 'your choose: exit'
+            exit()
+        elif choose == '1':
+            print 'choose:1.input member'
+            input_func()
+        elif choose == '2':
+            print 'choose:2.print list'
+        elif choose == '3':
+            print 'choose:3.find member'
+        elif choose == '4':
+            print 'choose:4.delete mamber'
+        elif choose == '5':
+            print 'choose:5.modify member'
+        else :
+            print 'your input error,please input again'
+
+
